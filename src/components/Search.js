@@ -1,4 +1,4 @@
-import { useSearchParams } from "react-router-dom"
+import { createSearchParams, useSearchParams } from "react-router-dom"
 
 const Search = () => {
 
@@ -6,7 +6,7 @@ const Search = () => {
         busqueda: ""
     })
 
-    const handleChange= (e) => {
+    const handleChange = (e) => {
         setSearchParams({
             query: e.target.value
         })
@@ -15,7 +15,11 @@ const Search = () => {
     return (
         <div>
             <h1>Search</h1>
-            <input type="text" onChange={handleChange} ></input>
+            <input
+                type="text"
+                onChange={handleChange}
+                value={SearchParams.query}
+            ></input>
         </div>
     )
 }
