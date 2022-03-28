@@ -3,16 +3,20 @@ import Nav from "./components/Nav";
 import Main from "./components/Main"
 import UltimosLanzamientos from "./components/UltimosLanzamientos"
 import Populares from "./components/Populares"
+import BuscadorDePeliculas from "./components/BuscadorDePeliculas"
 
 const App = () => {
   return (
 
     <BrowserRouter>
       <Nav>
+
         <Routes>
           <Route path="/" element={< Main />} />
           <Route path="/ultimosLanzamientos" element={<UltimosLanzamientos />} />
           <Route path="./populares" element={<Populares />} />
+          <Route path="./bucadorDePeliculas" element={<BuscadorDePeliculas />} />
+    
         </Routes>
 
       </Nav>
