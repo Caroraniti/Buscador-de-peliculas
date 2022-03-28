@@ -1,28 +1,38 @@
-import { createSearchParams, useSearchParams } from "react-router-dom"
+// import { useEffect, useState } from "react"
+// import { createSearchParams, useSearchParams } from "react-router-dom"
 
-const Search = () => {
+// const Search = () => {
 
-    const [SearchParams, setSearchParams] = useSearchParams({
-        busqueda: ""
-    })
+//     const [personajes, setPersonajes] = useState([])
+//     const [searchParams, setSearchParams] = useSearchParams({
+//         query: ""
+//     })
 
-    const handleChange = (e) => {
-        setSearchParams({
-            query: e.target.value
-        })
-    }
+//    useEffect(() => {
+//        fetch(`https://rickandmortyapi.com/api/character?name=${searchParams.get("query")}`)
+//        .then(res => res.json())
+//        .then(data => {
+//            setPersonajes(data.results)
+//        })
+//    }), {searchParams}
 
-    return (
-        <div>
-            <h1>Search</h1>
-            <input
-                type="text"
-                onChange={handleChange}
-                value={SearchParams.query}
-            ></input>
-        </div>
-    )
-}
+//     const handleChange = (e) => {
+//         setSearchParams({
+//             query: e.target.value
+//         })
+//     }
+
+//     return (
+//         <div>
+//             <h1>Search</h1>
+//             <input
+//                 type="text"
+//                 onChange={handleChange}
+//                 value={searchParams.get("query")}
+//             ></input>
+//         </div>
+//     )
+// }
 
 
-export default Search;
+// export default Search;
