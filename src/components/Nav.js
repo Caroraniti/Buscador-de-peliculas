@@ -1,30 +1,32 @@
 import { Link } from 'react-router-dom'
-
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
 
 
 const Nav = () => {
   return (
-    <Div sx={{ flexGrow: 1 }}>
-      <AppBar>
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="fixed" >
 
-        <Link to="/" className={classes.link}>
-          <Button variant="contained" color="primary" disableElevation>Home</Button>
-        </Link>
+        <Button color="grey">
+          <Link to="/" style={{ textDecoration: "none", color: "white" }}> Home </Link>
+        </Button>
 
-        <Link to="/lanzamientos" className={classes.link}>
-          <Button variant="contained" color="primary" disableElevation>Ultimos Lanzamientos</Button>
-        </Link>
+        <Button>
+          <Link to="/ultimos-lanzamientos" style={{ textDecoration: "none", color: "white" }}>Ultimos Lanzamientos</Link>
+        </Button>
 
-        <Link to="/populares" className={classes.link}>
-          <Button variant="contained" color="primary" disableElevation>Populares</Button>
-        </Link>
+        <Button>
+          <Link to="/populares" style={{ textDecoration: "none", color: "white" }}>Populares </Link>
+        </Button>
 
-        <Link to="/buscar" className={classes.link}>
-          <Button variant="contained" color="primary" disableElevation>Buscar</Button>
-        </Link>
+        <Button>
+          <Link to="/BuscadorPeliculas" style={{ textDecoration: "none", color: "white" }}>Buscar</Link>
+        </Button>
 
       </AppBar>
-    </Div>
+    </Box>
   )
 
 

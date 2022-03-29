@@ -1,21 +1,49 @@
-
+import Carrusel from "./Carrusel";
+import ListaPeliculas from "./ListaPeliculas"
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid'
 
 const Home = () => {
-
-    const populares = useFetch(`"https://api.themoviedb.org/3/movie/popular?api_key=2d9a1d2ba98bd4f269229908068559f1&language=es-ES&page=1"`)
     return (
-        //AGREGO EL CARRUSEL A LA PAGINA PRINCIPAL 
-        <Carrusel>
+        <div>
+            <Grid container spacing={4} direction="row"
+                justifyContent="center"
+                alignItems="center"
+            >
 
-        </Carrusel>
+                <Grid item xs={12} sx={{ borderColor: 'error.main' }}>
+                    <Box >
+                        <h2>Home</h2>
+                        <Carrusel />
+                    </Box>
+                </Grid>
+
+                <Grid item xs={4}>
+                    <Box>
+
+                        <ListaPeliculas
+                            titulo="Peliculas Populares"
+                            url="popular"
+                        />
+                    </Box>
+                </Grid>
+
+                <Grid item xs={4}>
+                    <Box>
+                        <ListaPeliculas
+                            titulo="Peliculas Mejor Puntuadas"
+                            url="top_rated"
+                        />
+                    </Box>
+                </Grid>
+
+
+
+
+            </Grid>
+        </div>
     )
 }
-
-
-
-
-
-
 
 
 export default Home;

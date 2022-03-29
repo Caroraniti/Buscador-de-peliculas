@@ -1,14 +1,16 @@
 import { useState, useEffect } from "react";
 
 const UseFetch = (url) => {
-    return (
-        const [peliculas, setPeliculas] =useState([])
+
+    const [peliculas, setPeliculas] =useState([])
     
             useEffect (() => {
-                
-            })
-    
-        )
+                fetch(url)
+                .then (res => res.json())
+                .then ( data => {
+                setPeliculas(data.results)})
+            },[])
+    return peliculas
 
 
 }
