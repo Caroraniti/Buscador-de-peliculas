@@ -1,32 +1,34 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import './App.css';
-import Nav from "./components/Nav";
-import Home from "./components/Home"
-import UltimosLanzamientos from "./components/UltimosLanzamientos";
-import Populares from "./components/Populares";
-import BuscadorDePeliculas from "./components/BuscadorDePeliculas";
+import { Link } from 'react-router-dom'
 
 
-const App = () => {
+
+const Nav = () => {
   return (
+    <Div sx={{ flexGrow: 1 }}>
+      <AppBar>
 
-    <BrowserRouter>
-      <Nav>
+        <Link to="/" className={classes.link}>
+          <Button variant="contained" color="primary" disableElevation>Home</Button>
+        </Link>
 
-        <Routes>
-          <Route path="/" element={< Home />} />
-          <Route path="/ultimosLanzamientos" element={<UltimosLanzamientos />} />
-          <Route path="./populares" element={<Populares />} />
-          <Route path="./bucadorDePeliculas" element={<BuscadorDePeliculas />} />
-    
-        </Routes>
+        <Link to="/lanzamientos" className={classes.link}>
+          <Button variant="contained" color="primary" disableElevation>Ultimos Lanzamientos</Button>
+        </Link>
 
-      </Nav>
+        <Link to="/populares" className={classes.link}>
+          <Button variant="contained" color="primary" disableElevation>Populares</Button>
+        </Link>
 
-    <Footer />
+        <Link to="/buscar" className={classes.link}>
+          <Button variant="contained" color="primary" disableElevation>Buscar</Button>
+        </Link>
 
-    </BrowserRouter>
+      </AppBar>
+    </Div>
   )
+
+
+
 }
 
-export default App;
+export default Nav;
