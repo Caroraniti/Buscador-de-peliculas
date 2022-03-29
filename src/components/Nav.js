@@ -1,9 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import './App.css';
 import Nav from "./components/Nav";
 import Home from "./components/Home"
-import UltimosLanzamientos from "./components/UltimosLanzamientos"
-import Populares from "./components/Populares"
-import BuscadorDePeliculas from "./components/BuscadorDePeliculas"
+import UltimosLanzamientos from "./components/UltimosLanzamientos";
+import Populares from "./components/Populares";
+import BuscadorDePeliculas from "./components/BuscadorDePeliculas";
+
 
 const App = () => {
   return (
@@ -21,6 +23,7 @@ const App = () => {
 
       </Nav>
 
+    <Footer />
 
     </BrowserRouter>
   )
