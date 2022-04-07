@@ -1,36 +1,27 @@
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import './App.css';
-import Nav from "./components/Nav";
 import Home from "./components/Home";
+import UltimosLanzamientos from "./components/UltimosLanzamientos";    
+import PeliculasPopulares from "./components/PeliculasPopulares"
+import Buscador from "./components/Buscador";
+import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-import Populares from "./components/Populares";
-import BuscadorPeliculas from "./components/BuscadorDePeliculas";
-import UltimosLanzamientos from "./components/UltimosLanzamientos";
-import DetallePelicula from "./components/DetallePelicula"
-
-
+import "./App.css";
 
 
 const App = () => {
   return (
-
     <BrowserRouter>
-      <Nav>
-
-
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/ultimos-lanzamientos" element={<UltimosLanzamientos />} />
-          <Route path="/populares" element={<Populares />} />
-          <Route path="/BuscadorPeliculas" element={<BuscadorPeliculas />} />
-          <Route path="/detallePelicula/:idPelicula" element={<DetallePelicula />} />
-        </Routes>
-      </Nav>
-
-      <Footer></Footer>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/ultimosLanzamientos" element={<UltimosLanzamientos />} />
+        <Route path="/populares" element={<PeliculasPopulares />} />
+        <Route path="/buscador" element={<Buscador />} />
+      </Routes>
+      <Footer/>
     </BrowserRouter>
-  )
-}
+  );
+};
 
 export default App;
