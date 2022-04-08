@@ -1,4 +1,4 @@
-BUSCADOR DE PELICULAS 
+<!-- BUSCADOR DE PELICULAS 
 ____________________________________________________________________
 
 Realizado con REACT y la API TheMovieDB
@@ -21,4 +21,4 @@ Se que no es la mejor pagina web, pero todo lo que aprendi este año
 fue muchisimo y agradezco cada caida. Seguire perfeccionandome en cada
 trabajo practico que entregué para ADA.
 Con 🤍 Carolina. -
-
+ -->
