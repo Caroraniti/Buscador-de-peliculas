@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 BUSCADOR DE PELICULAS 
 ____________________________________________________________________
 
@@ -23,4 +21,4 @@ Se que no es la mejor pagina web, pero todo lo que aprendi este año
 fue muchisimo y agradezco cada caida. Seguire perfeccionandome en cada
 trabajo practico que entregué para ADA.
 Con 🤍 Carolina. -
->>>>>>> 1d58dd57dfaed71d03d6d936300b49e366561b84
+
