@@ -1,4 +1,4 @@
-<!-- BUSCADOR DE PELICULAS 
+BUSCADOR DE PELICULAS 
 ____________________________________________________________________
 
 Realizado con REACT y la API TheMovieDB
@@ -13,7 +13,7 @@ Tecnologias utilizadas:
 🛠 REACT 
 ____________________________________________________________________
 
-PROYECTO: https://caroraniti.github.io/Buscador-de-peliculas/
+PROYECTO: 
 ____________________________________________________________________
 
 Este es mi ultimo trabajo practico como estudiante de ADA ITW. 
@@ -21,4 +21,3 @@ Se que no es la mejor pagina web, pero todo lo que aprendi este año
 fue muchisimo y agradezco cada caida. Seguire perfeccionandome en cada
 trabajo practico que entregué para ADA.
 Con 🤍 Carolina. -
- -->
