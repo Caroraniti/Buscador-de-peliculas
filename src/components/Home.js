@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 
-//ME DEJO DE FUNCIONAR EL FETCH. VERLO URGENTE 
 const Home = () => {
   const [PeliculasPopulares, setPeliculasPopulares] = useState([]);
   useEffect(() => {
@@ -18,14 +17,14 @@ const Home = () => {
   }, []);
   return (
     <>
-      {/* <Carousel/> */}
+  
       <div className="centrado flex-wrap">
         <div className="panel-home margen-tarjetas">
           <div className="titulo-tarjeta-home">PELICULAS MEJOR PUNTUADAS</div>
           <div>
-            {PeliculasPopulares.map((pelicula) => (
+            {PeliculasPopulares.map((PeliculasPopulares) => (
               <div className="flex space-between items-panel-home">
-                <p>{pelicula.title}</p>
+                <p>{PeliculasPopulares.title}</p>
                 <button className="click-icono-tarjeta"> > </button>
               </div>
             ))}
@@ -36,10 +35,10 @@ const Home = () => {
         <div className="panel-home margen-tarjetas">
           <div className="titulo-tarjeta-home">PELICULAS POPULARES</div>
           <div>
-            {PeliculasMejorPuntuadas.map((pelicula) => (
+            {PeliculasMejorPuntuadas.map((PeliculasMejorPuntuadas) => (
               <div className="flex space-between items-panel-home">
-                <p>{pelicula.title}</p>
-                <button className="click-icono-tarjeta"> > </button>
+                <p>{PeliculasMejorPuntuadas.title}</p>
+                <button className="click-icono-tarjeta"> >  </button>
               </div>
             ))}
           </div>
