@@ -25,4 +25,4 @@ Tecnologias utlizadas:
  Se que no es la mejor pagina web , pero todo lo que aprendi el año pasado y este fue muchisimo y agradezco cada caida. Seguire perfeccionandome en cada tp 
  entregue en ADA. 
  
- con 🤍 Carol
+ con 🤍 Carolina. -
