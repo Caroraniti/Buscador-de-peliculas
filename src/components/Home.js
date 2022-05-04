@@ -1,31 +1,43 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { FiArrowRight } from "react-icons/fi";
+import Footer from "./Footer";
+import Carrousel from "./Carrousel";
 
 const Home = () => {
-  const [PeliculasPopulares, setPeliculasPopulares] = useState([]);
+  const [topPeliculas, setTopPeliculas] = useState([]);
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/movie/top_rated?api_key=d2db916ed787e45a269779c746706c07&language=en-US`)
+      "https://api.themoviedb.org/3/movie/top_rated?api_key=d2db916ed787e45a269779c746706c07&language=es-ES"
+    )
       .then((res) => res.json())
-      .then((data) => setPeliculasPopulares(data.results));
+      .then((data) => setTopPeliculas(data.results));
   }, []);
 
-  const [PeliculasMejorPuntuadas, setPeliculasMejorPuntuadas] = useState([]);
+  const [PeliculasActuales, setPeliculasActuales] = useState([]);
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=d2db916ed787e45a269779c746706c07&language=en-US`)
+    fetch(
+      "https://api.themoviedb.org/3/movie/now_playing?api_key=d2db916ed787e45a269779c746706c07&language=en-US"
+    )
       .then((res) => res.json())
-      .then((data) => setPeliculasMejorPuntuadas(data.results));
+      .then((data) => setPeliculasActuales(data.results));
   }, []);
   return (
     <>
-  
-      <div className="centrado flex-wrap">
+      <Carrousel />
+
+      <div className="componentes-home centrado flex-wrap">
         <div className="panel-home margen-tarjetas">
-          <div className="titulo-tarjeta-home">PELICULAS MEJOR PUNTUADAS</div>
+          <div className="titulo-panel">TOP PELICULAS</div>
           <div>
-            {PeliculasPopulares.map((PeliculasPopulares) => (
+            {topPeliculas.map((pelicula) => (
               <div className="flex space-between items-panel-home">
-                <p>{PeliculasPopulares.title}</p>
-                <button className="click-icono-tarjeta"> > </button>
+                <p>{pelicula.title}</p>
+                <Link to={`/top/${pelicula.id}`}>
+                  <p className="panel-mas-info">
+                    <FiArrowRight />
+                  </p>
+                </Link>
               </div>
             ))}
           </div>
@@ -33,24 +45,25 @@ const Home = () => {
         <div></div>
 
         <div className="panel-home margen-tarjetas">
-          <div className="titulo-tarjeta-home">PELICULAS POPULARES</div>
+          <div className="titulo-panel">PELICULAS ACTUALES</div>
           <div>
-            {PeliculasMejorPuntuadas.map((PeliculasMejorPuntuadas) => (
+            {PeliculasActuales.map((pelicula) => (
               <div className="flex space-between items-panel-home">
-                <p>{PeliculasMejorPuntuadas.title}</p>
-                <button className="click-icono-tarjeta"> >  </button>
+                <p>{pelicula.title}</p>
+                <Link to={`/actuales/${pelicula.id}`}>
+                  <p className="panel-mas-info">
+                    <FiArrowRight />
+                  </p>
+                </Link>
               </div>
             ))}
           </div>
         </div>
         <div></div>
       </div>
-
+      <Footer />
     </>
   );
 };
 
 export default Home;
-
-
-

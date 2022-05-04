@@ -1,19 +1,19 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const PeliculasPopulares = () => {
-  const [PeliculasPopulares, setPeliculasPopulares] = useState([]);
+const Estrenos = () => {
+  const [Estrenos, setEstrenos] = useState([]);
   useEffect(() => {
     fetch(
-      "https://api.themoviedb.org/3/movie/popular?api_key=d2db916ed787e45a269779c746706c07&language=es-ES"
+      "https://api.themoviedb.org/3/movie/upcoming?api_key=d2db916ed787e45a269779c746706c07&language=es-ES"
     )
       .then((res) => res.json())
-      .then((data) => setPeliculasPopulares(data.results));
+      .then((data) => setEstrenos(data.results));
   }, []);
 
   return (
     <div className="flex-wrap centrado">
-      {PeliculasPopulares.map((pelicula) => (
+      {Estrenos.map((pelicula) => (
         <div className="tarjeta margen-tarjetas centrado-mas-info">
           <div>
             <img
@@ -25,7 +25,7 @@ const PeliculasPopulares = () => {
           <div>
             <h3 className="titulo-tarjeta">{pelicula.title}</h3>
           </div>
-          <Link to={`/populares/${pelicula.id}`}>
+          <Link to={`/estrenos/${pelicula.id}`}>
             <div>
               <p className="boton-tarjeta">Mas info</p>
             </div>
@@ -36,4 +36,4 @@ const PeliculasPopulares = () => {
   );
 };
 
-export default PeliculasPopulares;
+export default Estrenos;
